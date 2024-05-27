@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meeting Schedule</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MEETING SLOTS</h1>
+<div class="container1">
+    <div class="meetingRoom-box" id="meetingBox1">
+        <h3>Time: 02:00 PM</h3>
+        <p>Total Seats Available: <span id="seats1"></span></p>
+        <button onclick="openPopup(1)">Schedule Meeting</button>
+    </div>
+    <div class="meetingRoom-box" id="meetingBox2">
+        <h3>Time: 03:00 PM</h3>
+        <p>Total Seats Available: <span id="seats2"></span></p>
+        <button onclick="openPopup(2)">Schedule Meeting</button>
+    </div>
+    <div class="meetingRoom-box" id="meetingBox3">
+        <h3>Time: 4:30 PM</h3>
+        <p>Total Seats Available: <span id="seats3"></span></p>
+        <button onclick="openPopup(3)">Schedule Meeting</button>
+    </div>
+    <div class="meetingRoom-box" id="meetingBox4">
+        <h3>Time: 05:00 PM</h3>
+        <p>Total Seats Available: <span id="seats4"></span></p>
+        <button onclick="openPopup(4)">Schedule Meeting</button>
+    </div>
+</div>
+
+<!-- Popup for scheduling meeting -->
+<div style="background-color: rgb(20, 9, 1) ; " id="meetingPopup" class="popup">
+    <div style="background-color: rgb(20, 9, 1); margin-top: 0px;" class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 style="color: red; font-size: 50px;">Schedule Meeting</h2>
+        <form style="color: rgb(3, 244, 216); text-align: center; font-size: 30px;" id="meetingForm">
+            Name: <input type="text" id="name" placeholder="Your Name" required><br>
+            Email: <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <button type="submit">Book Meeting</button>
+        </form>
+    </div>
+</div>
+<br>
+
+<h1>SCHEDULED MEETING</h1>
+
+<div class="container"></div><br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
